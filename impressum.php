@@ -10,7 +10,7 @@ Autoren: Fabian Ferrari (, Philipp Ruland)
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>EM Tippspiel - Impressum</title>
+    <title>Tippspiel - Impressum</title>
     <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
@@ -23,7 +23,7 @@ Autoren: Fabian Ferrari (, Philipp Ruland)
         <h2>Impressum</h2>
 
     </div>
-    <div class="hero-unit">
+    <div class="jumbotron">
 
     <address> 
         <strong>Fabian Ferrari</strong> <br> 

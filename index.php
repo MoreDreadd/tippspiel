@@ -24,11 +24,11 @@ if($user->isLoggedIn()) {
 	<body>
 		<div class="container-fluid"> <!--Hier steht alles drin-->
 		<div class="page-header"><h1>Tippspiel <?php echo Session::get('meisterschafts_title'); ?></h1></div> <!--Hier ist Platz f&uuml;r ein Logo oder aehnliches-->
-		<div class="hero-unit"> <!--Der Inhalt-->
+		<div class="jumbotron"> <!--Der Inhalt-->
 		<?php
 
 			if(Session::exists('home')) {
-				echo '<p class="text-error">' . Session::flash('home') . '</p>';
+				echo '<div class="alert alert-danger" role="alert">' . Session::flash('home') . '</div>';
 			}
 		?>
 		Herzlich willkommen zum Tippspiel zur <?php echo Session::get('meisterschafts_title'); ?>.

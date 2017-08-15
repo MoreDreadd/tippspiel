@@ -106,36 +106,51 @@ require_once 'core/init.php';
 	<body>
 		<div class="container-fluid"> <!--Hier steht alles drin-->
 		<div class="page-header"><h1>Tippspiel <?php echo Session::get('meisterschafts_title'); ?></h1></div> <!--Hier ist Platz f&uuml;r ein Logo oder aehnliches-->
-		<div class="hero-unit"> <!--Der Inhalt-->
+		<div class="jumbotron"> <!--Der Inhalt-->
 
-			<form action="" method="POST">
+			<form action="" method="POST" class="form-horizontal">
 				<fieldset>
 					<legend>Registrieren:</legend>
-					<p class="text-error">
 						<?php
 						if(isset($errors)) {
+							echo "<div class='alert alert-danger' role='alert'>";
 							foreach($errors as $error) {
 									echo $error, '<br />';
 							}
-							echo "<br />";
+							echo "</div>";
 						}
 						?>
-					</p>
-					<label for="email">E-Mail:</label>
-					<input type="text" name="email" id="email" required="required" value="<?php echo escape(Input::get('email')); ?>" />
-					<br />
-					<label for="password">Passwort:</label>
-					<input type="password" name="password" id="password" required="required" />
-					<br />
-					<label for="password_again">Passwort wiederholen:</label>
-					<input type="password" name="password_again" id="password_again" required="required" />
-					<br />
-					<label for="name">Vor- und Nachname</label>
-					<input type="text" name="name" id="name" required="required" value="<?php echo escape(Input::get('name')); ?>" />
-					<br />
-					<input type="hidden" name="token" value="<?php echo Token::generate(); ?>" />
-					<input type="submit" value="Registrieren" class="btn btn-primary" />
-					<a href="index.php" class="btn">zur&uuml;ck</a>
+					<div class="form-group">
+						<label for="email" class="col-sm-2 control-label">E-Mail:</label>
+						<div class="col-sm-5">
+							<input class="form-control" placeholder="E-Mail" type="email" name="email" id="email" required="required" value="<?php echo escape(Input::get('email')); ?>" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="password" class="col-sm-2 control-label">Passwort:</label>
+						<div class="col-sm-5">
+							<input class="form-control" placeholder="Passwort" type="password" name="password" id="password" required="required" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="password_again" class="col-sm-2 control-label">Passwort wiederholen:</label>
+						<div class="col-sm-5">
+							<input class="form-control" placeholder="Passwort wiederholen" type="password" name="password_again" id="password_again" required="required" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="name" class="col-sm-2 control-label">Vor- und Nachname</label>
+						<div class="col-sm-5">
+							<input class="form-control" placeholder="Name" type="text" name="name" id="name" required="required" value="<?php echo escape(Input::get('name')); ?>" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-5">
+							<input type="hidden" name="token" value="<?php echo Token::generate(); ?>" />
+							<input type="submit" value="Registrieren" class="btn btn-primary" />
+							<a href="index.php" class="btn btn-default" role="button">zur&uuml;ck</a>
+						</div>
+					</div>
 				</fieldset>
 			</form>
 		</div>

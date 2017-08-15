@@ -78,7 +78,7 @@
   </head>
 
   <body>
-    Die Verarbeitung Ihres Tipps dauert l&auml;nger als &uuml;blich. Bitte haben Sie einen Moment gedult!<br />
+    Die Verarbeitung Ihres Tipps dauert l&auml;nger als &uuml;blich. Bitte haben Sie einen Moment Geduld!<br />
     Bei Problemen wenden Sie sich bitte an <a href='mailto:ferrarif97@gmail.com'>ferrarif97@gmail.com</a>.
   </body>
 

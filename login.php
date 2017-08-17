@@ -44,12 +44,10 @@ if(Input::exists()) {
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<!--<link rel="shortcut icon" type="image/x-icon" href="icon.ico">-->
 		<meta charset="utf-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Tippspiel</title>
 		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
-		<!--<link rel="stylesheet" type="text/css" href="style.css">-->
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link href="css/bootstrap-responsive.css" rel="stylesheet">
 	</head>

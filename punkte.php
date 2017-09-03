@@ -129,7 +129,8 @@
       
       //Ausgeben der Punkte fuer den aktuellen User
       echo "<tr style='color:".$farbe."'>";
-      echo "<td>".htmlentities($user[$i], ENT_QUOTES, 'UTF-8')."</td>";
+      //echo "<td>".htmlentities($user[$i], ENT_QUOTES, 'UTF-8')."</td>";
+      echo "<td>".$user[$i]."</td>";
 			echo "<td>".$richtigesErg."</td>";
 			echo "<td>".$richtigeTen."</td>";
 			echo "<td>".$richtigerGew."</td>";

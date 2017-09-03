@@ -28,7 +28,6 @@ Autoren: Fabian Ferrari (, Philipp Ruland)
 	<title>Tippspiel</title>
 	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body style="padding: 40px">
     <div class="container-fluid"> <!--Hier steht alles drin-->

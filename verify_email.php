@@ -36,7 +36,7 @@ if($user->isLoggedIn()) {
 	<head>
 		<!--<link rel="shortcut icon" type="image/x-icon" href="icon.ico">-->
 		<title>Tippspiel</title>
-		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>

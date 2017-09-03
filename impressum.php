@@ -11,7 +11,7 @@ Autoren: Fabian Ferrari (, Philipp Ruland)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Tippspiel - Impressum</title>
-    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+    <!--<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">-->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <!--<link rel="stylesheet" type="text/css" href="style.css">-->

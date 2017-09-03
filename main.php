@@ -16,8 +16,8 @@ Autoren: Fabian Ferrari (, Philipp Ruland)
 <html>
   <head>
     <!--<link rel="shortcut icon" type="image/x-icon" href="icon.ico">-->
-    <!--<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EM Tippspiel</title>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8">-->
     <!--<link rel="stylesheet" type="text/css" href="style.css">-->
@@ -26,7 +26,7 @@ Autoren: Fabian Ferrari (, Philipp Ruland)
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Tippspiel</title>
-	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+	<!--<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body style="padding: 40px">

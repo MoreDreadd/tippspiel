@@ -84,7 +84,7 @@
         if($gruppe==""){ //Die Ueberschrift, wenn alle Spiele ausgegeben werden
           echo "<u>Alle Spiele im &Uuml;berblick:</u><br /><br />";
         }
-        echo "<table class='table table-striped'>";
+        echo "<table class='table table-striped table-responsive'>";
         if($gruppe == "") {
           echo "<tr><th>Ansto&szlig;</th><th>Team 1</th><th>Team 2</th><th>Endstand</th></tr>";
         } else {

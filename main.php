@@ -16,7 +16,7 @@ Autoren: Fabian Ferrari (, Philipp Ruland)
 <html>
   <head>
     <!--<link rel="shortcut icon" type="image/x-icon" href="icon.ico">-->
-    <meta charset="utf-8" content="">
+    <meta charset="utf-8">
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EM Tippspiel</title>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8">-->

@@ -3,12 +3,12 @@
 Autoren: Fabian Ferrari (, Philipp Ruland)
 
 -->
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="de">
   <head>
     <!--<link rel="shortcut icon" type="image/x-icon" href="icon.ico">-->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Tippspiel - Impressum</title>
     <!--<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">-->

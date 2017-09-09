@@ -74,7 +74,7 @@ require_once 'core/init.php';
 						'group' => 1
 					));
 					
-					Session::flash('home', 'Ihr Konto wurde erfolgreich erstellt!<br />Bitte &uuml;berpr&uuml;fen Sie Ihren Posteingang und best&auml;tigen Sie Ihre E-Mail Adresse, um Ihr Konto zu aktivieren.');
+					Session::flash('home', '<div class="alert alert-success" role="alert">Ihr Konto wurde erfolgreich erstellt!<br />Bitte &uuml;berpr&uuml;fen Sie Ihren Posteingang und best&auml;tigen Sie Ihre E-Mail Adresse, um Ihr Konto zu aktivieren.</div>');
 					Redirect::to('index.php');
 					
 				} catch(Exception $e) {
@@ -91,12 +91,12 @@ require_once 'core/init.php';
 
 ?>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="de">
 	<head>
 		<!--<link rel="shortcut icon" type="image/x-icon" href="icon.ico">-->
 		<meta charset="utf-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Tippspiel</title>
 		<link href="css/bootstrap.css" rel="stylesheet">
     	<link href="css/bootstrap-responsive.css" rel="stylesheet">

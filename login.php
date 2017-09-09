@@ -27,7 +27,7 @@ if(Input::exists()) {
 			if($login) {
 				Redirect::to('main.php');
 			} else {
-				Session::flash('login', 'Sie konnten nicht angemeldet werden!<br />&Uuml;berpr&uuml;fen Sie E-Mail und Passwort und stellen Sie sicher, dass Sie Ihre E-Mail bereits best&auml;tigt haben!');
+				Session::flash('login', '<div class="alert alert-danger" role="alert">Sie konnten nicht angemeldet werden!<br />&Uuml;berpr&uuml;fen Sie E-Mail und Passwort und stellen Sie sicher, dass Sie Ihre E-Mail bereits best&auml;tigt haben!</div>');
 			}
 			
 		} else {
@@ -41,11 +41,11 @@ if(Input::exists()) {
 
 ?>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="de">
 	<head>
 		<meta charset="utf-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Tippspiel</title>
 		<!--<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">-->
 		<link href="css/bootstrap.css" rel="stylesheet">
@@ -61,7 +61,7 @@ if(Input::exists()) {
 					<legend>Anmeldung:</legend>
 					<?php
 						if(Session::exists('login')) {
-							echo '<div class="alert alert-danger" role="alert">' . Session::flash('login') . '</div>';
+							echo Session::flash('login');
 						}
 					?>
 					<div class="form-group">

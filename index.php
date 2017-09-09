@@ -8,12 +8,12 @@ if($user->isLoggedIn()) {
 } else {
 ?>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="de">
 	<head>
 		<!--<link rel="shortcut icon" type="image/x-icon" href="icon.ico">-->
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<title>Tippspiel</title>
 		<!--<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">-->
@@ -26,9 +26,8 @@ if($user->isLoggedIn()) {
 		<div class="page-header"><h1>Tippspiel <?php echo Session::get('meisterschafts_title'); ?></h1></div> <!--Hier ist Platz f&uuml;r ein Logo oder aehnliches-->
 		<div class="jumbotron"> <!--Der Inhalt-->
 		<?php
-
 			if(Session::exists('home')) {
-				echo '<div class="alert alert-danger" role="alert">' . Session::flash('home') . '</div>';
+				echo Session::flash('home');
 			}
 		?>
 		Herzlich willkommen zum Tippspiel zur <?php echo Session::get('meisterschafts_title'); ?>.
@@ -42,7 +41,7 @@ if($user->isLoggedIn()) {
 		</div>
 		<footer>
 			<p class="pull-right"><a href="#">nach oben</a></p>
-			<p>&copy; 2016 Fabian Ferrari &middot; <a href="impressum.php">Impressum</a></p>
+			<p>&copy; 2017 Fabian Ferrari &middot; <a href="impressum.php">Impressum</a></p>
 		</footer>
 		</div>
 

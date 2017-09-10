@@ -109,6 +109,13 @@ class User {
 		return $this->_isLoggedIn;
 	}
 
+	public function hasPermission($group) {
+		if($group <= $this->data()->group) {
+			return true;
+		}
+		return false;
+	}
+
 	public function verifyEmail($hash) {
 
 		$data = $this->_db->get('users', array('email_hash', '=', $hash))->first();

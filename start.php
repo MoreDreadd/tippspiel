@@ -5,13 +5,6 @@
       <p>
         Oben k&ouml;nnen Sie die <b>Anleitung</b> lesen, den aktuellen <b>Punktestand</b> nachschauen und die Ergebnisse der einzelnen <b>Spiele</b> tippen.
       </p>
-      <!--<br><br>
-      <p>
-      	Nat&uuml;rlich gibt es f&uuml;r flei&szlig;ige Tipper auch etwas zu gewinnen:<br />
-      	1. Platz: Wert von 15 &euro;<br />
-      	2. Platz: Wert von 10 &euro;<br />
-      	3. Platz: Wert von 5 &euro;
-      </p>-->
       <br /><br />
       <p>
       <?php
@@ -25,4 +18,38 @@
 
         echo "Es haben schon ".$db->first()->Anzahl." Personen Tipps abgegeben!";
       ?>
+      </p>
+      <br />
+      <br />
+      <p>
+        <h3>Neuigkeiten:</h3>
+        <?php
+
+          $user = new User();
+          $id = Session::get(Config::get('session/session_name'));
+          if($user->find($id)) {
+            if($user->hasPermission(2)) {
+              include 'inputForm.php';
+            }
+          }
+
+        ?>
+
+        <?php
+        
+          $db->query("SELECT * FROM news ORDER BY date DESC");
+          $news = $db->results();
+          foreach ($news as $row) {
+            $db->query('SELECT name FROM users WHERE id = ' . $row->author);
+            $author = $db->first()->name;
+            echo "<p>";
+            echo "<blockquote><p>";
+            echo "<h4>" . $row->title . "</h4>";
+            echo $row->text . "</p>";
+            echo "<footer>" . $author . ", " . $row->date . "</footer>";
+            echo "</blockquote>";
+            echo "</p>";
+          }
+
+        ?>
       </p>

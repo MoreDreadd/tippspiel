@@ -30,10 +30,10 @@
 
       mysql_query($sql); //Der Tipp wird in die Datenbank eingetragen.
 
-      Session::flash('spiele', 'Ihr Tipp wurde verarbeitet!');
+      Session::flash('spiele', '<div class="alert alert-success" role="alert">Ihr Tipp wurde verarbeitet!</div>');
 
     } else {
-      Session::flash('spiele', 'Es gab ein Problem mit Ihrem Tipp!');
+      Session::flash('spiele', '<div class="alert alert-danger" role="alert">Es gab ein Problem mit Ihrem Tipp!</div>');
     }
 
     

@@ -59,7 +59,7 @@
   <?php
       
       if(Session::exists('spiele')) {
-        echo '<div class="alert alert-danger" role="alert">' . Session::flash('spiele') . '</div>';
+        echo Session::flash('spiele');
       }
 
       $meisterschaft = Config::get('meisterschaft/meisterschafts_id');

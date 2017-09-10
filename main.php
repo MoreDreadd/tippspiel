@@ -13,7 +13,7 @@ Autoren: Fabian Ferrari (, Philipp Ruland)
 
 -->
 <!DOCTYPE html>
-<html>
+<html lang="de">
   <head>
     <!--<link rel="shortcut icon" type="image/x-icon" href="icon.ico">-->
     <meta charset="utf-8">
@@ -23,13 +23,14 @@ Autoren: Fabian Ferrari (, Philipp Ruland)
     <!--<link rel="stylesheet" type="text/css" href="style.css">-->
     <!--<link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tippspiel</title>
     <!--<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="javascript/TableSort.js" type="text/javascript"></script> <!-- Das Java-Script zum Sortieren der Tabelle wird eingebunden -->
   </head>
   <body style="padding: 40px">
+      <div class="page-header"><h1>Tippspiel <?php echo Session::get('meisterschafts_title'); ?></h1></div> <!--Hier ist Platz f&uuml;r ein Logo oder aehnliches-->
     <nav class="navbar navbar-fixed-top navbar-inverse">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -49,11 +50,16 @@ Autoren: Fabian Ferrari (, Philipp Ruland)
           <li><a href="main.php?seite=punkte">Punkte</a></li>
           <li><a href="main.php?seite=spiele">Spiele</a></li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo Session::get('username'); ?> <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Not implemented yet!</a></li>
+
+        <!-- Hier muss das Dropdown Menu noch eingebaut werden! -->
+        <ul class="nav pull-right navbar-nav">
+          <li id="fat-menu" class="dropdown">
+            <a href="#" class="dropdown-toggle" role="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <?php echo Session::get('username'); ?>
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="#">Not implemented yet</a></li>
             </ul>
           </li>
           <li><a href="logout.php" style="padding-right: 25px;">Abmelden</a></li>
@@ -87,7 +93,7 @@ Autoren: Fabian Ferrari (, Philipp Ruland)
     </div>
     <footer>
       <p class="pull-right"><a href="#">nach oben</a></p>
-      <p>&copy; 2016 Fabian Ferrari &middot; <a href="impressum.php">Impressum</a></p>
+      <p>&copy; 2017 Fabian Ferrari &middot; <a href="impressum.php">Impressum</a></p>
     </footer>
     </div>
 

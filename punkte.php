@@ -1,10 +1,3 @@
-<html>
-  <head>
-  <meta charset="utf-8">
-	<script src="javascript/TableSort.js" type="text/javascript"></script> <!-- Das Java-Script zum Sortieren der Tabelle wird eingebunden -->
-  </head>
-  <body>
-  
   <p>
     Hier sehen Sie eine &Uuml;bersicht der aktuellen Punkte.
     <br />
@@ -179,8 +172,6 @@
   </tr>
   </table>
   
-    <br />
-    <br />
-    
-  </body>
-</html>
+  <br />
+  <br />
+

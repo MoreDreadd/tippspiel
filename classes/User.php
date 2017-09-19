@@ -135,4 +135,28 @@ class User {
 		return false;
 
 	}
+
+	public function changePassword($newPW, $hash) {
+		$salt = Hash::salt(32);
+		$data = $this->_db->get('users', array('email_hash', '=', $hash));
+		if($this->_db->count() == 0) {
+			return false;
+		} else {
+			$userID = $data->first()->id;
+		}
+
+		if($userID) {
+
+			$this->_db->update('users', $userID, array(
+				'email_hash' => '',
+				'password' => Hash::make($newPW, $salt),
+				'salt' => $salt
+			));
+
+			return true;
+
+		}
+
+		return false;
+	}
 }

@@ -52,7 +52,7 @@ Autoren: Fabian Ferrari (, Philipp Ruland)
         </ul>
 
         <!-- Hier muss das Dropdown Menu noch eingebaut werden! -->
-        <ul class="nav pull-right navbar-nav">
+        <ul class="nav navbar-right navbar-nav">
           <li id="fat-menu" class="dropdown">
             <a href="#" class="dropdown-toggle" role="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <?php echo Session::get('username'); ?>

@@ -87,6 +87,11 @@ if(Input::exists()) {
 					</div>
 					<div class="form-group">
 						<div class="col-sm-offset-1 col-sm-5">
+							<a href="forgotPassword.php">Passwort vergessen?</a>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-1 col-sm-5">
 							<input type="hidden" name="token" value="<?php echo Token::generate(); ?>" />
 							<input type="submit" value="Anmelden" class="btn btn-primary" />
 							<a href="index.php" class="btn btn-default" role="button">zur&uuml;ck</a>

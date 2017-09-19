@@ -7,7 +7,7 @@
   <table>
   <tr>
   <td>
-  <table class="table table-striped sortierbar"> <!-- Wichtig ist hier, dass die class "sortierbar" angegeben wird, genau wie bei den Tabellen&uuml;berschriften. Dadurch wird die Tabelle sortierbar -->
+  <table class="table table-striped sortierbar table-responsive"> <!-- Wichtig ist hier, dass die class "sortierbar" angegeben wird, genau wie bei den Tabellen&uuml;berschriften. Dadurch wird die Tabelle sortierbar -->
    <thead>
     <tr>
       <th class="sortierbar">Name</th>

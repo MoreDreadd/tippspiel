@@ -24,11 +24,14 @@
 <br />
 <br />
 <form method="POST" action="#">
-	<div class="form-group">
-		<input type="text" class="form-control" name="title" id="title" placeholder="Titel" required>
-	</div>
-	<div class="form-group">
-		<textarea class="form-control" rows="5" placeholder="Text" id="text" name="text" required></textarea>
-	</div>
-	<input class="btn btn-primary" type="submit" name="submit" value="Absenden">
+	<fieldset>
+		<legend>Neuen Eintrag verfassen:</legend>
+		<div class="form-group">
+			<input type="text" class="form-control" name="title" id="title" placeholder="Titel" required>
+		</div>
+		<div class="form-group">
+			<textarea class="form-control" rows="5" placeholder="Text" id="text" name="text" required></textarea>
+		</div>
+		<input class="btn btn-primary" type="submit" name="submit" value="Absenden">
+	</fieldset>
 </form>

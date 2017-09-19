@@ -60,6 +60,7 @@ require_once 'core/init.php';
 				try {
 
 					if(!mail($email, $subject, $email_body)){
+						Session::flash('home', '<div class="alert alert-danger" role="alert">Es gab ein Problem mit Ihrer Aktivierung! Bitte versuchen Sie es erneut oder kontaktieren Sie den Administrator</div>');
 						Redirect::to('index.php');
 					}
 

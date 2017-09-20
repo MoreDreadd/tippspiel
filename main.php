@@ -49,6 +49,7 @@ Autoren: Fabian Ferrari (, Philipp Ruland)
           <li><a href="main.php?seite=anleitung">Anleitung</a></li>
           <li><a href="main.php?seite=punkte">Punkte</a></li>
           <li><a href="main.php?seite=spiele">Spiele</a></li>
+          <li><a href="main.php?seite=tipps">Tipps</a></li>
         </ul>
 
         <!-- Hier muss das Dropdown Menu noch eingebaut werden! -->
@@ -87,6 +88,7 @@ Autoren: Fabian Ferrari (, Philipp Ruland)
       case "anleitung": include 'anleitung.php'; break;
       case "punkte": include 'punkte.php'; break;
       case "spiele": include 'spiele.php'; break;
+      case "tipps": include 'tipps.php'; break;
       }
     ?>
 

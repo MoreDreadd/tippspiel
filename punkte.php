@@ -13,9 +13,9 @@
       <th class="sortierbar">Name</th>
       <th class="sortierbar">Richtige Tipps</th>
       <th class="sortierbar">Richtige Tendenz</th>
-	 <th class="sortierbar">Richtiger Gewinner</th>
-	 <th class="sortierbar">Fehltipps</th>
-	 <th class="sortierbar">Punkte</th>
+      <th class="sortierbar">Richtiger Gewinner</th>
+      <th class="sortierbar">Fehltipps</th>
+      <th class="sortierbar">Punkte</th>
     </tr>
    </thead>
    <tbody>

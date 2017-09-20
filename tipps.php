@@ -23,7 +23,7 @@
 		array_push($spielID, $spiel->ID);
 	}
 
-	if($db->query("SELECT DISTINCT tipp.User FROM tipp, spiel WHERE tipp.SpielID = spiel.ID AND spiel.MeisterschaftsID = ".Config::get('meisterschaft/meisterschafts_id'))) {
+	if($db->query("SELECT DISTINCT tipp.User FROM tipp, spiel, users WHERE tipp.SpielID = spiel.ID AND spiel.MeisterschaftsID = ".Config::get('meisterschaft/meisterschafts_id')." AND tipp.User = users.name AND users.showData = 1")) {
 		$names = $db->results();
 	} else {
 		die("Es gab ein Problem!");

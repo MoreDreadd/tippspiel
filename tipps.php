@@ -26,7 +26,7 @@
 		}
 	}
 
-	if($db->query("SELECT DISTINCT tipp.User FROM tipp, spiel, users WHERE tipp.SpielID = spiel.ID AND spiel.MeisterschaftsID = ".Config::get('meisterschaft/meisterschafts_id')." AND tipp.User = users.name AND users.showData = 1")) {
+	if($db->query("SELECT DISTINCT tipp.User FROM tipp, spiel, users WHERE tipp.SpielID = spiel.ID AND spiel.MeisterschaftsID = ".Config::get('meisterschaft/meisterschafts_id')." AND tipp.User = users.name AND users.showData = 1 ORDER BY tipp.User")) {
 		$names = $db->results();
 	} else {
 		die("Es gab ein Problem!");

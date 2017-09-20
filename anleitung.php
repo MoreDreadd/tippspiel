@@ -26,4 +26,7 @@
         <br>
         Bei einem <b>Elfmeterschie&szlig;en</b> wird das Ergebnis des Elfmeterschie&szlig;ens als Endergebnis genommen.<br />
         Wenn es nach 120 Minuten 1:1 steht und das Elfmeterschie&szlig;en 4:3 ausgeht, ist 4:3 das Ergebnis des Spiels.
+        <br />
+        <br />
+        Unter <b>Tipps</b> finden Sie eine &Uuml;bersicht &uuml;ber die Tipps zu bereits begonnenen Spielen. Angezeigt werden nur Nutzer, die dem Anzeigen ihrer Daten zugestimmt haben (im Moment noch per direkter Nachricht an den Administrator). Die Nutzer werden dabei in alphabetischer Reihenfolge angezeigt.
     </p>

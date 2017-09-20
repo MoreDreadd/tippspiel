@@ -4,7 +4,6 @@
 	//if($db->query("SELECT * FROM spiel WHERE Beginn < " . date('Y-m-d H:i:s') . "AND spiel.MeisterschaftsID = ".Config::get('meisterschaft/meisterschafts_id')." ORDER BY ID")) {
 	if($db->query("SELECT * FROM spiel WHERE MeisterschaftsID = ".Config::get('meisterschaft/meisterschafts_id')." ORDER BY ID")) {
 		$spiele = $db->results();
-		$anzahlSpiele = $db->count();
 	} else {
 		die("Es gab ein Problem!");
 	}
@@ -14,13 +13,17 @@
 	$toreA = array();
 	$toreB = array();
 	$spielID = array();
+	$anzahlSpiele = 0;
 
 	foreach ($spiele as $spiel) {
-		array_push($teamA, $spiel->TeamA);
-		array_push($teamB, $spiel->TeamB);
-		array_push($toreA, $spiel->ToreA);
-		array_push($toreB, $spiel->ToreB);
-		array_push($spielID, $spiel->ID);
+		if($spiel->Beginn < date("Y-m-d H:i:s")) {
+			array_push($teamA, $spiel->TeamA);
+			array_push($teamB, $spiel->TeamB);
+			array_push($toreA, $spiel->ToreA);
+			array_push($toreB, $spiel->ToreB);
+			array_push($spielID, $spiel->ID);
+			$anzahlSpiele++;
+		}
 	}
 
 	if($db->query("SELECT DISTINCT tipp.User FROM tipp, spiel, users WHERE tipp.SpielID = spiel.ID AND spiel.MeisterschaftsID = ".Config::get('meisterschaft/meisterschafts_id')." AND tipp.User = users.name AND users.showData = 1")) {

@@ -3,7 +3,8 @@
         Willkommen, <?php echo Session::get('username'); ?>, zum Tippspiel zur <?php echo Session::get('meisterschafts_title'); ?>.<br /> <br />
       </p>
       <p>
-        Oben k&ouml;nnen Sie die <b>Anleitung</b> lesen, den aktuellen <b>Punktestand</b> nachschauen und die Ergebnisse der einzelnen <b>Spiele</b> tippen.
+        Oben k&ouml;nnen Sie die <b>Anleitung</b> lesen, den aktuellen <b>Punktestand</b> nachschauen und die Ergebnisse der einzelnen <b>Spiele</b> tippen.<br />
+        Au&szlig;erdem finden Sie unter <b>Tipps</b> eine &Uuml;bersicht &uuml;ber die Tipps zu bereits begonnenen Spielen.
       </p>
       <br /><br />
       <p>

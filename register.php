@@ -42,6 +42,7 @@ require_once 'core/init.php';
 				$subject = 'Account Aktivierung Tippspiel';
 				$email_hash = Hash::unique();
 				$name = Input::get('name');
+				$showData = (Input::get('showData') === 'on') ? 1 : 0;
 
 				$email_body = "
 					Hallo {$name}, \n
@@ -72,7 +73,8 @@ require_once 'core/init.php';
 						'joined' => date('Y-m-d H:i:s'),
 						'activated' => 0,
 						'email_hash' => $email_hash,
-						'group' => 1
+						'group' => 1,
+						'showData' => $showData
 					));
 					
 					Session::flash('home', '<div class="alert alert-success" role="alert">Ihr Konto wurde erfolgreich erstellt!<br />Bitte &uuml;berpr&uuml;fen Sie Ihren Posteingang und best&auml;tigen Sie Ihre E-Mail Adresse, um Ihr Konto zu aktivieren.</div>');
@@ -83,9 +85,6 @@ require_once 'core/init.php';
 				}
 			} else {
 				$errors = $validation->errors();
-				/**foreach($validation->errors() as $error) {
-					echo $error, '<br />';
-				}**/
 			}
 		}
 	}
@@ -95,13 +94,11 @@ require_once 'core/init.php';
 <!DOCTYPE html>
 <html lang="de">
 	<head>
-		<!--<link rel="shortcut icon" type="image/x-icon" href="icon.ico">-->
 		<meta charset="utf-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Tippspiel</title>
-		<link href="css/bootstrap.css" rel="stylesheet">
-    	<link href="css/bootstrap-responsive.css" rel="stylesheet">
-		<!--<link rel="stylesheet" type="text/css" href="style.css">-->
+		<link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
 		<div class="container-fluid"> <!--Hier steht alles drin-->
@@ -142,6 +139,16 @@ require_once 'core/init.php';
 						<label for="name" class="col-sm-2 control-label">Vor- und Nachname</label>
 						<div class="col-sm-5">
 							<input class="form-control" placeholder="Name" type="text" name="name" id="name" required="required" value="<?php echo escape(Input::get('name')); ?>" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-5">
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" name="showData" id="showData" aria-describedby="helpMessage" /> Tipps anzeigen
+								</label>
+							</div>
+							<span id="helpMessage" class="help-block">Wenn ausgew&auml;lt, werden abgegebene Tipps nach Spielbeginn f&uuml;r alle angemeldeten Nutzer angezeigt.</span>
 						</div>
 					</div>
 					<div class="form-group">

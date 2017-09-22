@@ -1,7 +1,6 @@
 <?php 
 
 	$db = DB::getInstance();
-	//if($db->query("SELECT * FROM spiel WHERE Beginn < " . date('Y-m-d H:i:s') . "AND spiel.MeisterschaftsID = ".Config::get('meisterschaft/meisterschafts_id')." ORDER BY ID")) {
 	if($db->query("SELECT * FROM spiel WHERE MeisterschaftsID = ".Config::get('meisterschaft/meisterschafts_id')." ORDER BY ID")) {
 		$spiele = $db->results();
 	} else {

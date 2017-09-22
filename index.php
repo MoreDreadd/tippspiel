@@ -13,12 +13,9 @@ if($user->isLoggedIn()) {
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
 		<title>Tippspiel</title>
-		<!--<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">-->
-		<!--<link rel="stylesheet" type="text/css" href="style.css">-->
-		<link href="css/bootstrap.css" rel="stylesheet">
-		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
 		<div class="container-fluid"> <!--Hier steht alles drin-->
@@ -39,8 +36,8 @@ if($user->isLoggedIn()) {
 		Neu hier? Dann <a href="register.php">registrieren</a> Sie sich jetzt.
 		</div>
 		<footer>
-			<p class="pull-right"><a href="#">nach oben</a></p>
-			<p>&copy; 2017 Fabian Ferrari &middot; <a href="impressum.php">Impressum</a></p>
+			<p class="pull-right"><a href="#" class="body">nach oben</a></p>
+			<p>&copy; 2017 Fabian Ferrari &middot; <a href="impressum.php" class="body">Impressum</a></p>
 		</footer>
 		</div>
 

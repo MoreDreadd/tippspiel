@@ -35,9 +35,6 @@ require_once 'core/init.php';
 				}
 			} else {
 				$errors = $validation->errors();
-				/**foreach($validation->errors() as $error) {
-					echo $error, '<br />';
-				}**/
 			}
 		}
 	}
@@ -49,7 +46,8 @@ require_once 'core/init.php';
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Passwort zur&uuml;cksetzen</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body style="padding: 40px">
 	<div class="container-fluid">

@@ -34,11 +34,11 @@ if($user->isLoggedIn()) {
 <!DOCTYPE html>
 <html lang="de">
 	<head>
-		<!--<link rel="shortcut icon" type="image/x-icon" href="icon.ico">-->
 		<title>Tippspiel</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
 		<div id="container-fluid"> <!--Hier steht alles drin-->

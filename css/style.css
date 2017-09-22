@@ -1,0 +1,10 @@
+body{
+	background-color: green;
+	padding: 40px;
+}
+a.body{
+	color: white;
+}
+blockquote {
+    border-left: 5px solid green;
+  }

@@ -7,7 +7,7 @@
   <table>
   <tr>
   <td>
-  <table class="table table-striped sortierbar table-responsive"> <!-- Wichtig ist hier, dass die class "sortierbar" angegeben wird, genau wie bei den Tabellen&uuml;berschriften. Dadurch wird die Tabelle sortierbar -->
+  <table class="table table-striped sortierbar table-responsive"> <!-- Wichtig ist hier, dass die class "sortierbar" angegeben wird, genau wie bei den Tabellenueberschriften. Dadurch wird die Tabelle sortierbar -->
    <thead>
     <tr>
       <th class="sortierbar">Name</th>
@@ -43,7 +43,7 @@
 	$toreA = array(); //Der Array, in dem die geschossenen Tore von Team A gespeichert werden
 	$toreB = array(); //Der Array, in dem die geschossenen Tore von Team B gespeichert werden
   $userS = array(); //Der Array, in dem die User in Abhaengigkeit von den getippten Spielen gespeichert werden (--> $userS[3] hat $tippA[3] und $tippB[3] getippt)
-	//Spiel Tabellen
+	//Spiel Tabellen:
 	$tippA = array(); //Der Array, in dem die getippten Tore von Team A gespeichert werden
 	$tippB = array(); //Der Array, in dem die getippten Tore von Team B gespeichert werden
   
@@ -123,7 +123,6 @@
       
       //Ausgeben der Punkte fuer den aktuellen User
       echo "<tr style='color:".$farbe."'>";
-      //echo "<td>".htmlentities($user[$i], ENT_QUOTES, 'UTF-8')."</td>";
       echo "<td>".$user[$i]."</td>";
 			echo "<td>".$richtigesErg."</td>";
 			echo "<td>".$richtigeTen."</td>";
@@ -142,33 +141,6 @@
 
   </table>
   </td>
-  
-  <!--
-  <td>
-  <table border="8" style="float: right">  In dieser Tabelle werden die Platzierungen fest angezeigt 
-    <thead>
-      <tr>
-      <th>Platzierung</th>
-      </tr>
-    </thead>
-  <?PHP
-    
-    $platz = 1; //Die Platzierung des Spielers
-    
-    for($i=0; $i<count($user); $i++){
-      echo "<tr>";
-      echo "<td>";
-      echo $platz;
-      echo "</td>";
-      echo "</tr>";
-      
-      $platz++;
-    }
-    
-  ?>
-  </table>
-  </td>
-  -->
   </tr>
   </table>
   

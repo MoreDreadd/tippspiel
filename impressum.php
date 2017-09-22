@@ -6,24 +6,20 @@ Autoren: Fabian Ferrari (, Philipp Ruland)
 <!DOCTYPE html>
 <html lang="de">
   <head>
-    <!--<link rel="shortcut icon" type="image/x-icon" href="icon.ico">-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Tippspiel - Impressum</title>
-    <!--<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">-->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-    <!--<link rel="stylesheet" type="text/css" href="style.css">-->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <div class="container-fluid"> <!--Hier steht alles drin-->
-    <div class="page-header"> <!--Der Inhalt-->
+    <div class="page-header">
 
         <h2>Impressum</h2>
 
     </div>
-    <div class="jumbotron">
+    <div class="jumbotron"> <!-- Der Inhalt -->
 
     <address> 
         <strong>Fabian Ferrari</strong> <br> 

@@ -9,13 +9,9 @@
       <br /><br />
       <p>
       <?php
-	//mysql_connect($dbziel, $dbname, $dbpass);
-	//mysql_select_db($db);
     
         $db = DB::getInstance();
         $db->query("SELECT COUNT(*) AS Anzahl FROM (SELECT DISTINCT tipp.User FROM tipp, spiel WHERE tipp.SpielID = spiel.ID AND spiel.MeisterschaftsID = '" . Config::get('meisterschaft/meisterschafts_id') . "') AS Tipper"); //Die Abfrage gibt die Anzahl der Spieler aus, die bisher Tipps abgegeben haben
-	      //$result = $db->results();
-	      //$row = mysql_fetch_assoc($result);
 
         echo "Es haben schon ".$db->first()->Anzahl." Personen Tipps abgegeben!";
       ?>

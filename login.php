@@ -47,9 +47,8 @@ if(Input::exists()) {
 		<meta charset="utf-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Tippspiel</title>
-		<!--<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">-->
-		<link href="css/bootstrap.css" rel="stylesheet">
-		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
 		<div class="container-fluid"> <!--Hier steht alles drin-->

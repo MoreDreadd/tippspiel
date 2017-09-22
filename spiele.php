@@ -17,40 +17,11 @@
           <li><a href="main.php?seite=spiele&gruppe=halb">Halbfinale</a></li>
           <li><a href="main.php?seite=spiele&gruppe=finale">Finale</a></li>-->
           <li class="nav-header">Spieltage</li>
-          <li><a href="main.php?seite=spiele&gruppe=1">1. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=2">2. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=3">3. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=4">4. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=5">5. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=6">6. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=7">7. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=8">8. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=9">9. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=10">10. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=11">11. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=12">12. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=13">13. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=14">14. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=15">15. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=16">16. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=17">17. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=18">18. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=19">19. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=20">20. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=21">21. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=22">22. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=23">23. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=24">24. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=25">25. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=26">26. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=27">27. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=28">28. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=29">29. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=30">30. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=31">31. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=32">32. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=33">33. Spieltag</a></li>
-          <li><a href="main.php?seite=spiele&gruppe=34">34. Spieltag</a></li>
+          <?php
+            for ($i=1; $i < 35; $i++) { 
+              echo "<li><a href='main.php?seite=spiele&gruppe={$i}'>{$i}. Spieltag</a></li>";
+            }
+          ?>
         </ul>
       </div>
     </div>
@@ -80,7 +51,6 @@
                
         $result = mysql_query($abfrage);
         $datum = date("Y-m-d H:i:s"); //Das aktuelle Datum und Uhrzeit wird gespeichert
-        //$datum = "2014-09-01 00:00:00";
         if($gruppe==""){ //Die Ueberschrift, wenn alle Spiele ausgegeben werden
           echo "<u>Alle Spiele im &Uuml;berblick:</u><br /><br />";
         }

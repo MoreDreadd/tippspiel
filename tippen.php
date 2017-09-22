@@ -40,19 +40,6 @@
 
     mysql_close();
 
-
-    //header('Location: main.php?seite=spiele&meisterschaft='.$_REQUEST['meisterschaft'].'&gruppe='.$_REQUEST['gruppe']); //Es wird wieder die Seite aufgerufen, auf der der User das Spiel getippt hat.
-
-    /**$link = "main.php?seite=spiele&meisterschaft=".Config::get('meisterschaft/meisterschafts_id')."&gruppe=".$_GET['gruppe'];
-    
-    $ausgabe = "Ihr Tipp wurde verarbeitet.";
-    $ausgabe .= "<br />";
-    $ausgabe .= "<br />";
-    $ausgabe .= "<a href='".$link."'>Weiter</a>";
-    
-    echo $ausgabe;**/
-
-
     Redirect::to("main.php?seite=spiele&meisterschaft=".$_REQUEST['meisterschaft']."&gruppe=".$_REQUEST['gruppe']);
 
 ?>
@@ -72,8 +59,8 @@
     <title>Tipp wird verarbeitet...</title>
 
     <meta charset="utf-8">
-    
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
   </head>
 

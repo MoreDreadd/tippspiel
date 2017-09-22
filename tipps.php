@@ -44,6 +44,14 @@
 		Hier sehen Sie eine &Uuml;bersicht &uuml;ber alle abgegebenen Tipps.<br />
 		Angezeigt werden nur Nutzer, die dem Anzeigen ihrer Daten zugestimmt haben.
 	</p>
+	<br />
+	<p>
+		<ul>
+			<li><span style="color: red;">rot</span>: richtiges Ergebnis</li>
+			<li><span style="color: blue;">blau</span>: richtige Tendenz</li>
+			<li><span style="color: green">gr&uuml;n</span>: richtiger Gewinner</li>
+		</ul>
+	</p>
 	<table class="table table-striped table-responsive">
 		<thead>
 			<tr>
@@ -59,18 +67,40 @@
 		<tbody>
 			<?php
 
+				$skip = false;
 				for($i = 0; $i < $anzahlSpiele; $i++) {
 					echo "<tr>";
-					echo "<td>".$teamA[$i]." : ".$teamB[$i]."</td>";
-					echo "<td>".$toreA[$i].":".$toreB[$i]."</td>";
-					foreach ($users as $user) {
-						$db->query("SELECT ToreA, ToreB FROM tipp WHERE SpielID = ".$spielID[$i]." AND User = '".$user."'");
-						if($db->count() != 0) {
-							$tipp = $db->first();
-							echo "<td>".$tipp->ToreA.":".$tipp->ToreB."</td>";
-						} else {
-							echo "<td>-</td>";
+					if ($i%50==0 && $i != 0 && !$skip) {
+						echo "<th>Begegnung</th><th>Ergebnis</th>";
+						foreach ($users as $user) {
+							echo "<th>".$user."</th>";
 						}
+						$skip = true;
+						$i--;
+					} else {
+						echo "<td>".$teamA[$i]." : ".$teamB[$i]."</td>";
+						echo "<td>".$toreA[$i].":".$toreB[$i]."</td>";
+						foreach ($users as $user) {
+							$db->query("SELECT ToreA, ToreB FROM tipp WHERE SpielID = ".$spielID[$i]." AND User = '".$user."'");
+							if($db->count() != 0) {
+								$tipp = $db->first();
+								$tippA = $tipp->ToreA;
+								$tippB = $tipp->ToreB;
+								if($tippA == $toreA[$i] && $tippB == $toreB[$i]) {
+									$style = "style='color: red;'";
+								} elseif(($tippA - $tippB) == ($toreA[$i] - $toreB[$i])){
+									$style = "style='color: blue;'";
+								} elseif(($tippA > $tippB) && ($toreA[$i] > $toreB[$i]) || ($tippA < $tippB) && ($toreA[$i] < $toreB[$i])){
+									$style = "style='color: green;'";
+								} else {
+									$style = "";
+								}
+								echo "<td ".$style.">".$tippA.":".$tippB."</td>";
+							} else {
+								echo "<td>-</td>";
+							}
+						}
+						$skip = false;
 					}
 					echo "</tr>";
 				}

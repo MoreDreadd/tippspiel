@@ -1,7 +1,7 @@
 <?php 
 
 	$db = DB::getInstance();
-	if($db->query("SELECT * FROM spiel WHERE MeisterschaftsID = ".Config::get('meisterschaft/meisterschafts_id')." ORDER BY ID")) {
+	if($db->query("SELECT * FROM spiel WHERE MeisterschaftsID = ".Config::get('meisterschaft/meisterschafts_id')." ORDER BY Beginn")) {
 		$spiele = $db->results();
 	} else {
 		die("Es gab ein Problem!");
@@ -70,7 +70,7 @@
 				$skip = false;
 				for($i = 0; $i < $anzahlSpiele; $i++) {
 					echo "<tr>";
-					if ($i%50==0 && $i != 0 && !$skip) {
+					if ($i%10==0 && $i != 0 && !$skip) {
 						echo "<th>Begegnung</th><th>Ergebnis</th>";
 						foreach ($users as $user) {
 							echo "<th>".$user."</th>";
